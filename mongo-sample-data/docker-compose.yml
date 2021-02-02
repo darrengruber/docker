@@ -1,0 +1,19 @@
+---
+version: '3'
+
+services:
+
+  mongo-sample-data:
+    image: darren/mongo-sample-data:v1
+    build: .
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: hunter2
+
+# docker-compose exec mongo-sample-data \
+#         mongo \
+#         -u mongoadmin \
+#         -p hunter2 \
+#         --authenticationDatabase admin \
+#         data
+
